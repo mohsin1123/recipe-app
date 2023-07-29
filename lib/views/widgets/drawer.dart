@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/views/beef_recipes.dart';
+import 'package:recipe_app/views/breakfast_recipes_view.dart';
 import 'package:recipe_app/views/chicken_recipes.dart';
+import 'package:recipe_app/views/lamb_recipes_View.dart';
+import 'package:recipe_app/views/miscelleneous_recipe_view.dart';
+import 'package:recipe_app/views/pasta_Recipe_view.dart';
+import 'package:recipe_app/views/pork_recipe_view.dart';
+import 'package:recipe_app/views/seafood_recipe_view.dart';
+import 'package:recipe_app/views/vegan_Recipe_view.dart';
+import 'package:recipe_app/views/vegetarian_Recipe_view.dart';
 
 class HomepageDrawer extends StatelessWidget {
   const HomepageDrawer({super.key});
@@ -40,70 +48,84 @@ class HomepageDrawer extends StatelessWidget {
                     builder: ((context) => const ChickenRecipesPage()))),
           ),
           ListTile(
-            title: Text(
-              "Dessert",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          ListTile(
-            title: Text(
+            title: const Text(
               "Lamb",
               style: TextStyle(color: Colors.white),
             ),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => const LambRecipesView()))),
           ),
           ListTile(
-            title: Text(
+            title: const Text(
               "Miscellaneous",
               style: TextStyle(color: Colors.white),
             ),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => const MiscelleneousRecipeView()))),
           ),
           ListTile(
-            title: Text(
+            title: const Text(
               "Pasta",
               style: TextStyle(color: Colors.white),
             ),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => const PastaRecipeView()))),
           ),
           ListTile(
-            title: Text(
+            title: const Text(
               "Pork",
               style: TextStyle(color: Colors.white),
             ),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => const PorkRecipeView()))),
           ),
           ListTile(
-            title: Text(
+            title: const Text(
               "Seafood",
               style: TextStyle(color: Colors.white),
             ),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => const SeafoodRecipeView()))),
           ),
           ListTile(
-            title: Text(
-              "Side",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          ListTile(
-            title: Text(
-              "Starter",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          ListTile(
-            title: Text(
+            title: const Text(
               "Vegan",
               style: TextStyle(color: Colors.white),
             ),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => const VeganRecipeView()))),
           ),
           ListTile(
-            title: Text(
+            title: const Text(
               "Vegetarian",
               style: TextStyle(color: Colors.white),
             ),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => const VegetarianRecipeView()))),
           ),
           ListTile(
-            title: Text(
+            title: const Text(
               "Breakfast",
               style: TextStyle(color: Colors.white),
             ),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => const BreakfastRecipesView()))),
           ),
           const Divider(),
           const Padding(

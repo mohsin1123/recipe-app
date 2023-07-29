@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:recipe_app/services/homepage_latest_provider.dart';
 import 'package:recipe_app/services/homeseafood_provider.dart';
 import 'package:recipe_app/views/beef_recipe_view.dart';
+import 'package:recipe_app/views/search_view.dart';
 import 'package:recipe_app/views/widgets/drawer.dart';
 
 class HomePageView extends StatefulWidget {
@@ -17,12 +18,21 @@ class _HomePageViewState extends State<HomePageView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          iconTheme: const IconThemeData(color: Colors.white),
-          title: const Text(
-            "Delightful Eats",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-          backgroundColor: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Text(
+          "Delightful Eats",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: ((context) => const SearchPage()))),
+              icon: const Icon(Icons.search_outlined))
+        ],
+      ),
       drawer: const HomepageDrawer(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
