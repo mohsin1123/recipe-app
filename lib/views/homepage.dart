@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:recipe_app/services/homepage_latest_provider.dart';
 import 'package:recipe_app/services/homeseafood_provider.dart';
 import 'package:recipe_app/views/beef_recipe_view.dart';
-import 'package:recipe_app/views/search_view.dart';
 import 'package:recipe_app/views/widgets/drawer.dart';
+import 'package:recipe_app/views/widgets/search.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
@@ -26,10 +26,9 @@ class _HomePageViewState extends State<HomePageView> {
         backgroundColor: Colors.black,
         actions: [
           IconButton(
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: ((context) => const SearchPage()))),
+              onPressed: () {
+                showSearch(context: context, delegate: SearchRecipes());
+              },
               icon: const Icon(Icons.search_outlined))
         ],
       ),
