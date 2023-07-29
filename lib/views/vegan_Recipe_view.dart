@@ -200,7 +200,7 @@ class _VeganRecipeViewState extends State<VeganRecipeView> {
                                           children: [
                                             SizedBox(
                                               height: 100,
-                                              width: 280,
+                                              width: 200,
                                               child: Text(
                                                 snapshot
                                                     .data!.meals![index].strMeal

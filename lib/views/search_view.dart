@@ -270,12 +270,10 @@ class _SearchPageState extends State<SearchPage> {
                                           Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
                                             children: [
                                               SizedBox(
                                                 height: 100,
-                                                width: 280,
+                                                width: 200,
                                                 child: Text(
                                                   snapshot.data!.meals![index]
                                                       .strMeal

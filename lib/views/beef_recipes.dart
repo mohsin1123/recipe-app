@@ -201,7 +201,7 @@ class _BeefRecipesPageState extends State<BeefRecipesPage> {
                                           children: [
                                             SizedBox(
                                               height: 100,
-                                              width: 280,
+                                              width: 220,
                                               child: Text(
                                                 snapshot
                                                     .data!.meals![index].strMeal
@@ -209,7 +209,7 @@ class _BeefRecipesPageState extends State<BeefRecipesPage> {
                                                     .trim(),
                                                 style: GoogleFonts.poppins(
                                                     color: Colors.white,
-                                                    fontSize: 20,
+                                                    fontSize: 18,
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
